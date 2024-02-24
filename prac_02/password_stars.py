@@ -17,7 +17,7 @@ def get_password(prompt):
 
 
 def print_asterisks(characters):
-    """Print asterisks as long as the password."""
+    """Print asterisks as long as password."""
     for i in range(len(characters)):
         print("*", end="")
 
