@@ -23,8 +23,7 @@ print(result)
 # 4.
 with open(NUMBERS_FILE, "r") as in_file:
     total = 0
-    for line in in_file.readlines():
-        numbers = line.strip().split()
-        total += sum(int(number) for number in numbers)
+    for number in in_file:
+        total += int(number)
     print(f"Total sum is {total}")
 
