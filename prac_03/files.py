@@ -3,7 +3,7 @@ NUMBERS_FILE = "numbers.txt"
 
 # 1.
 name = input("Name: ")
-out_file = open(NAMES_FILE, "w")
+out_file = open(name, "w")
 out_file.write(name)
 out_file.close()
 
