@@ -26,6 +26,5 @@ while email != "":
 
 print()
 
-# Print all from dictionary
 for email in email_to_name:
     print(f"{email_to_name[email]} ({email})")
