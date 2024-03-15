@@ -20,7 +20,6 @@ while email != "":
     # Provide key and value into dictionary
     email_to_name[email] = full_name
     answer = input(f"Is your name {full_name}? (Y/n) ").upper()
-    # LBYL and EAFP
     if "N" in answer:
         name = input("Name: ")
     email = input("Email: ")
