@@ -3,28 +3,36 @@ Emails
 Estimate: 35 minutes
 Actual:   38  minutes
 """
-email_to_name = {}
 
-email = input("Email: ")
 
-while email != "":
-    # Separate email into full name and email's configuration
-    parts = email.split("@")
+def main():
+    """Based on email show name and email."""
+    email_to_name = {}
+    email = input("Email: ")
+    while email != "":
+        full_name = separate_name_from_email(email)
+        name = check_name(full_name)
+        email_to_name[email] = name
+        email = input("Email: ")
+    for email in email_to_name:
+        print(f"{email_to_name[email]} ({email})")
 
-    # Split name into first and second names
-    name_details = parts[0].split(".")
 
-    # Make full name by joining and titling each part of full name
-    full_name = " ".join(name_details).title()
-
-    # Provide key and value into dictionary
-    email_to_name[email] = full_name
+def check_name(full_name):
+    """Check found name is correct."""
     answer = input(f"Is your name {full_name}? (Y/n) ").upper()
     if "N" in answer:
         name = input("Name: ")
-    email = input("Email: ")
+        return name
+    return full_name
 
-print()
 
-for email in email_to_name:
-    print(f"{email_to_name[email]} ({email})")
+def separate_name_from_email(email):
+    """Separate name from email to find name."""
+    parts = email.split("@")
+    name_details = parts[0].split(".")
+    full_name = " ".join(name_details).title()
+    return full_name
+
+
+main()
