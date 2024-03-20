@@ -15,9 +15,10 @@ def main():
 
 def write_guitars_to_file(guitars):
     """Write all new guitars inside the file in special format."""
-    with open('guitars.csv', 'w') as out_file:
-        for guitar in guitars:
-            out_file.write(f"{guitar.name},{guitar.year},{guitar.cost}\n")
+    out_file = open('guitars.csv', 'w')
+    for guitar in guitars:
+        out_file.write(f"{guitar.name},{guitar.year},{guitar.cost}\n")
+    out_file.close()
 
 
 def add_new_guitar(guitars):
