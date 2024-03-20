@@ -7,12 +7,34 @@ def main():
     in_file = open('guitars.csv', 'r')
     # File format is like: Name,Year,Cost
     prepare_guitars_details(guitars, in_file)
-    in_file.close()
+    guitars = add_new_guitar(guitars)
+    write_guitars_to_file(guitars)
     display_sorted_guitars(guitars)
+    in_file.close()
+
+
+def write_guitars_to_file(guitars):
+    """Write all new guitars inside the file in special format."""
+    with open('guitars.csv', 'w') as out_file:
+        for guitar in guitars:
+            out_file.write(f"{guitar.name},{guitar.year},{guitar.cost}\n")
+
+
+def add_new_guitar(guitars):
+    """Add new entered guitars inside list."""
+    print("My guitars!")
+    name = input("Name: ").title()
+    while name != "":
+        year = int(input("Year: "))
+        cost = float(input("Cost: $"))
+        print(Guitar(name, year, cost), "added.")
+        guitars.append(Guitar(name, year, cost))
+        name = input("Name: ").title()
+    return guitars
 
 
 def prepare_guitars_details(guitars, in_file):
-    in_file.readline()
+    """Process the data and prepare to display."""
     for line in in_file:
         # Strip newline from end and split it into parts (CSV)
         parts = line.strip().split(',')

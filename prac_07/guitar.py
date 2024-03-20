@@ -1,7 +1,7 @@
 """
 Guitars!
 Estimate: 30 minutes
-Actual:  minutes
+Actual:  46 minutes
 """
 
 
