@@ -7,7 +7,7 @@ def main():
     in_file = open('guitars.csv', 'r')
     # File format is like: Name,Year,Cost
     prepare_guitars_details(guitars, in_file)
-    guitars = add_new_guitar(guitars)
+    guitars = enter_new_guitar(guitars)
     write_guitars_to_file(guitars)
     display_sorted_guitars(guitars)
     in_file.close()
@@ -21,7 +21,7 @@ def write_guitars_to_file(guitars):
     out_file.close()
 
 
-def add_new_guitar(guitars):
+def enter_new_guitar(guitars):
     """Add new entered guitars inside list."""
     print("My guitars!")
     name = input("Name: ").title()
