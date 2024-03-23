@@ -5,7 +5,9 @@
 ## About me:
 
 I am Diana Bukeikhanova, a student of Bachelor (Majoring in IT) at James Cook University.
-Right now, I am studying in Singapore, but my home country is Kazakhstan.
+Right now, I am studying in Singapore. It is my 3rd trimester of studying on IT. I am planing, after finishing the 
+Bachelor degree, to work for experience and to learn new features. I also think about attending Master Degree of IT, 
+maybe in the future.
 
 ## About CP1404 repository:
 
