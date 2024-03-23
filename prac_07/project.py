@@ -25,9 +25,9 @@ class Project:
         return f" {self.name}, start: {self.start_date.strftime('%d/%m/%Y')}, priority {self.priority}" \
                f", estimate: ${self.cost:.2f}, completion: {self.completion_percentage}%"
 
-    def is_unfinished(self):
+    def is_unfinished(self, MAXIMUM_PERCENTAGE=100):
         """Returns True for projects that are incomplete."""
-        if self.completion_percentage != 100:
+        if self.completion_percentage != MAXIMUM_PERCENTAGE:
             return True
 
     def is_updated_percentage(self, entered_percentage):
