@@ -9,11 +9,7 @@ class Guitar:
     """Represent Guitar object."""
 
     def __init__(self, name="", year=0, cost=0.1):
-        """Initialise guitar name, year and cost.
-
-        name:string
-        year=integer
-        cost:float"""
+        """Initialise guitar name, year and cost."""
         self.name = name
         self.year = year
         self.cost = cost
