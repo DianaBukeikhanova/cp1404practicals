@@ -30,7 +30,7 @@ class Project:
         if self.completion_percentage != MAXIMUM_PERCENTAGE:
             return True
 
-    def is_updated_percentage(self, entered_percentage):
+    def is_updated_completion_percentage(self, entered_percentage):
         """Update completion percentage from entered percentage."""
         self.completion_percentage = entered_percentage
 

@@ -84,7 +84,7 @@ def update_project(projects):
         try:
             new_percentage = int(input("New Percentage: "))
             new_priority = int(input("New priority: "))
-            projects[project_choice].is_updated_percentage(int(new_percentage))
+            projects[project_choice].is_updated_completion_percentage(int(new_percentage))
             projects[project_choice].is_updated_priority(int(new_priority))
             valid_statement = False
         except ValueError:
