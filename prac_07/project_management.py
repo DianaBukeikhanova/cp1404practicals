@@ -121,7 +121,7 @@ def filter_projects(projects):
     """Ask the user for a date and display only projects that start after that date, sorted by date."""
     date_string = input("Show projects that start after date (dd/mm/yy): ")
     filter_date = datetime.datetime.strptime(date_string, "%d/%m/%Y").date()
-    filtered_projects = [project for project in projects if project.start_date > filter_date]
+    filtered_projects = [project for project in projects if project.start_date >= filter_date]
     filtered_projects.sort().__gt__(filter_date)
     for project in filtered_projects:
         print(project)
